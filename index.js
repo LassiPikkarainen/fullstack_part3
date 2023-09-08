@@ -6,6 +6,7 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.use(express.static('build'))
 
 morgan.token('content', function(req, res) {
     if (Object.keys(req.body).length > 0){
